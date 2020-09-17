@@ -10,17 +10,13 @@ import { TreeMultiSelectorComponent } from './TreeMultiSelector';
 
 function App() {
   return (
-    <BrowserRouter>
-    <div>
-      <Switch>
-        <Route path="/demo-module/tree-multi-selector">
-          <TreeMultiSelectorComponent />
-        </Route>
-        <Route path="/demo-module/drag-and-select">
-          <DragAndSelectComponent />
-        </Route>
-      </Switch>
-    </div>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <Route path="/tree-multi-selector">
+        <TreeMultiSelectorComponent />
+      </Route>
+      <Route path="/drag-and-select">
+        <DragAndSelectComponent />
+      </Route>
     </BrowserRouter>
   );
 }
