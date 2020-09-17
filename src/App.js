@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  BrowserRouter,
+  HashRouter,
   Route,
 } from "react-router-dom";
 import { DragAndSelectComponent } from './DragAndSelect';
@@ -10,11 +10,11 @@ import { TreeMultiSelectorComponent } from './TreeMultiSelector';
 
 function App() {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter>
       <Route exact path="/" component={Home} />
       <Route path="/tree-multi-selector" component={TreeMultiSelectorComponent} />
       <Route path="/drag-and-select" component={DragAndSelectComponent}/>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
