@@ -1,24 +1,28 @@
 import React from 'react';
-
-import ReactTreeMultiSelector from 'react-tree-multi-selector';
-
 import {
-  dummyCategories,
-  dummyInitial,
-  dummyExceptions,
-  dummyNotSelections,
-  dummySelectedCategoryCallback
-} from './dummy.js'
+  BrowserRouter,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import { DragAndSelectComponent } from './DragAndSelect';
+import { TreeMultiSelectorComponent } from './TreeMultiSelector';
+
 
 function App() {
   return (
-    <ReactTreeMultiSelector
-      categories={dummyCategories}
-      initialSelectedIds={dummyInitial}
-      exceptionIds={dummyExceptions}
-      notSelectionIds={dummyNotSelections}
-      handleSelectedCategories={dummySelectedCategoryCallback}
-    />
+    <BrowserRouter>
+    <div>
+      <Switch>
+        <Route path="/tree-multi-selector">
+          <TreeMultiSelectorComponent />
+        </Route>
+        <Route path="/drag-and-select">
+          <DragAndSelectComponent />
+        </Route>
+      </Switch>
+    </div>
+    </BrowserRouter>
   );
 }
 
