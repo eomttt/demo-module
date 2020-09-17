@@ -3,7 +3,6 @@ import {
   BrowserRouter,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 import { DragAndSelectComponent } from './DragAndSelect';
 import { TreeMultiSelectorComponent } from './TreeMultiSelector';
@@ -14,10 +13,10 @@ function App() {
     <BrowserRouter>
     <div>
       <Switch>
-        <Route path="/tree-multi-selector">
+        <Route path="/demo-modules/tree-multi-selector">
           <TreeMultiSelectorComponent />
         </Route>
-        <Route path="/drag-and-select">
+        <Route path="/demo-modules/drag-and-select">
           <DragAndSelectComponent />
         </Route>
       </Switch>
