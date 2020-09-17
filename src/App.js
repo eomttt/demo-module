@@ -11,15 +11,9 @@ import { TreeMultiSelectorComponent } from './TreeMultiSelector';
 function App() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <Route exact path="/">
-        <Home />
-      </Route>
-      <Route path="/tree-multi-selector">
-        <TreeMultiSelectorComponent />
-      </Route>
-      <Route path="/drag-and-select">
-        <DragAndSelectComponent />
-      </Route>
+      <Route exact path="/" component={Home} />
+      <Route path="/tree-multi-selector" component={TreeMultiSelectorComponent} />
+      <Route path="/drag-and-select" component={DragAndSelectComponent}/>
     </BrowserRouter>
   );
 }
