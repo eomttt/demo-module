@@ -13,10 +13,10 @@ function App() {
     <BrowserRouter>
     <div>
       <Switch>
-        <Route path="/demo-modules/tree-multi-selector">
+        <Route path="/demo-module/tree-multi-selector">
           <TreeMultiSelectorComponent />
         </Route>
-        <Route path="/demo-modules/drag-and-select">
+        <Route path="/demo-module/drag-and-select">
           <DragAndSelectComponent />
         </Route>
       </Switch>
